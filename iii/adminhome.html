@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <style>
+        body {
+            background-color: #FFEBEE; /* Light red background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #E53935; /* Dark red text color */
+            margin-bottom: 20px; /* Added margin below the h2 */
+        }
+
+        h3 {
+            text-align: center;
+            color: #E53935;
+            margin-top: 20px;
+        }
+
+        form {
+            background-color: #FFCDD2; /* Red form background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        label {
+            color: #E53935;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #E53935;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #E53935; /* Dark red button color */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #D32F2F; /* Darken on hover */
+        }
+    </style>
+    <script src="logout.js" defer></script>
+    <script src="adminhome.js" defer></script>
+    <script src="index.html"></script>
+</head>
+<body>
+
+    <h2>Welcome, Admin!</h2>
+
+    <h3>Add File:</h3>
+    <form id="addFileForm">
+        <label for="fileName">File Name:</label>
+        <input type="text" id="fileName" required>
+        <button type="button" onclick="addFile()">Add File</button>
+    </form>
+
+    <h3>Remove File:</h3>
+    <form id="removeFileForm">
+        <label for="fileToRemove">Select File:</label>
+        <select id="fileToRemove" required>
+            <!-- Options for available files -->
+            <option value="file1.txt">file1.txt</option>
+            <option value="file2.txt">file2.txt</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button type="button" onclick="removeFile()">Remove File</button>
+        
+    </form>
+    <button onclick="logout()">Logout</button>
+</body>
+
+</html>

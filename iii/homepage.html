@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Homepage</title>
+    <script src="homepage.js" defer></script>
+</head>
+<body>
+    <h2>Welcome, Admin!</h2>
+
+    <h3>Add File:</h3>
+    <form id="addFileForm">
+        <label for="fileName">File Name:</label>
+        <input type="text" id="fileName" required>
+        <button type="button" onclick="addFile()">Add File</button>
+    </form>
+
+    <h3>Remove File:</h3>
+    <form id="removeFileForm">
+        <label for="fileToRemove">Select File:</label>
+        <select id="fileToRemove" required>
+            <!-- Options for available files -->
+            <option value="file1.txt">file1.txt</option>
+            <option value="file2.txt">file2.txt</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button type="button" onclick="removeFile()">Remove File</button>
+    </form>
+    
+    <button onclick="logout()">Logout</button>
+</body>
+</html>
