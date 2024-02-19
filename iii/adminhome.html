@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home Page</title>
     <style>
         body {
-            background-color: #FFEBEE; /* Light red background */
+            background-image: url('https://www.ue.edu.ph/portals/sp/ap_img/login.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logout-dropdown {
+            position: relative;
+        }
+
+        .logout-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        .logout-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .logout-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .logout-dropdown:hover .logout-dropdown-content {
+            display: block;
         }
 
         h2 {
             text-align: center;
-            color: #E53935; /* Dark red text color */
-            margin-bottom: 20px; /* Added margin below the h2 */
+            color: #FFFFFF;
+            margin-bottom: 20px;
         }
 
         h3 {
             text-align: center;
-            color: #E53935;
-            margin-top: 20px;
+            color: #FFFFFF;
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
 
         form {
-            background-color: #FFCDD2; /* Red form background */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -48,7 +94,7 @@
         }
 
         button {
-            background-color: #E53935; /* Dark red button color */
+            background-color: #E53935;
             color: white;
             padding: 10px;
             border: none;
@@ -58,16 +104,22 @@
         }
 
         button:hover {
-            background-color: #D32F2F; /* Darken on hover */
+            background-color: #D32F2F;
         }
     </style>
     <script src="logout.js" defer></script>
     <script src="adminhome.js" defer></script>
-    <script src="index.html"></script>
 </head>
 <body>
-
-    <h2>Welcome, Admin!</h2>
+    <div class="header">
+        <h2>Welcome, Admin!</h2>
+        <div class="logout-dropdown">
+            <button onclick="logout()">Logout</button>
+            <div class="logout-dropdown-content">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
 
     <h3>Add File:</h3>
     <form id="addFileForm">
@@ -86,9 +138,9 @@
             <!-- Add more options as needed -->
         </select>
         <button type="button" onclick="removeFile()">Remove File</button>
-        
     </form>
-    <button onclick="logout()">Logout</button>
-</body>
 
+    
+</body>
 </html>
+
