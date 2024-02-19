@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <script src="login.js" defer></script>
-<style>
+    <style>
        body {
-            background-color: #FFEBEE; /* Light red background */
+            background-image: url('https://www.ue.edu.ph/mla/wp-content/uploads/2023/07/SFC4.jpg');
+            background-size: cover;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -17,11 +18,12 @@
         }
 
         .login-container {
-            background-color: #FFCDD2; /* Red form background */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            border: 2px solid #E53935; /* Red border */
         }
 
         h2 {
@@ -69,13 +71,10 @@
         a:hover {
             text-decoration: underline;
         }
-</style>
-  
- <script src="app.js"defer></script>
+    </style>
 </head>
 
 <body>
-
     <h2>Login</h2>
 
     <div class="login-container">
@@ -91,11 +90,5 @@
     </div>
 
     <p>Don't have an account? <a href="signup.html">Signup</a></p>
-   
-    
-
 </body>
-
-
-
 </html>
